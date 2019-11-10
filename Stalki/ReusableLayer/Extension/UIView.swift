@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vinicius Mangueira. All rights reserved.
 //
 
-import UIKit
+import Reusable
 
 protocol With{}
 
@@ -20,3 +20,4 @@ extension With where Self : AnyObject {
 }
 
 extension UIView: With{}
+
