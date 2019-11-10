@@ -1,0 +1,9 @@
+os: osx
+language: objective-c
+osx_image: xcode11
+before_install:
+    - rvm use system
+    - sudo gem install cocoapods -v '1.8.4'  
+script:
+  - xcodebuild -workspace Stalki.xcworkspace -scheme Stalki -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
