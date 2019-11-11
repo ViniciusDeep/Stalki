@@ -10,8 +10,7 @@ import UIKit
 
 class InsideRepoContentView: UIView, ConfigurableView {
    
-    
-    let contents = ["","OWNER", "CONTRIBUTORS","SOURCE", "ISSUES", "PULL REQUESTS"]
+    let factory = RepoTableFactory()
     
     lazy var tableView = UITableView(frame: .zero, style: .grouped).then {
         $0.separatorStyle = .none
@@ -31,7 +30,7 @@ class InsideRepoContentView: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
-           addSubviews([tableView])
+        addSubviews([tableView])
     }
        
     func setupConstraints() {
@@ -39,56 +38,32 @@ class InsideRepoContentView: UIView, ConfigurableView {
     }
     
     fileprivate func registerCellsAtTableView() {
-        RepoTableFactory.registerCells(cells: [OwnerCell.self, ContributorsCell.self], on: self.tableView)
+        RepoTableFactory.registerCells(cells: [OwnerCell.self, ContributorsCell.self], on: tableView)
     }
 }
 
 extension InsideRepoContentView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 {
-            return InsideRepoHeaderView()
-        } else {
-            return SectionHeaderView(textLabel: contents[section])
-        }
+        return factory.disposeHeader(withSection: section).headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 250
-        } else if section == 1 {
-            return 50
-        } else if section == 2 {
-            return 20
-        } else {
-            return 50
-        }
+        return factory.disposeHeader(withSection: section).heightForHeader
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return factory.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 0
-        } else {
-            return 1
-        }
+        return factory.disposeRows(withIndexPath: IndexPath(row: 0, section: section)).numberOfRows
     }
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        
-        if indexPath.section == 1 {
-            cell = tableView.dequeueReusableCell(for: indexPath, cellType: OwnerCell.self)
-        } else if indexPath.section == 2 {
-            cell = tableView.dequeueReusableCell(for: indexPath, cellType: ContributorsCell.self)
-        }
-        return cell
+        return factory.cellForRow(on: tableView, forIndexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return factory.disposeRows(withIndexPath: indexPath).heightForRow
     }
-    
 }
