@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3BADD7287170D49BD73AACD2 /* Pods_StalkiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA4BDDA527AB1011802AD47 /* Pods_StalkiTests.framework */; };
 		6D4D2FC35F29C939E8DF4CB0 /* Pods_Stalki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8589CC58D61ED76C2510F7FD /* Pods_Stalki.framework */; };
+		7900C269237864C700825791 /* SectionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900C268237864C700825791 /* SectionsHeader.swift */; };
+		7900C26C2378669C00825791 /* OwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900C26B2378669C00825791 /* OwnerCell.swift */; };
+		7900C26E2378677D00825791 /* CustomizeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900C26D2378677D00825791 /* CustomizeComponents.swift */; };
 		790ECD88235C7E8D007BBA1B /* InsideUserMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD87235C7E8D007BBA1B /* InsideUserMainView.swift */; };
 		790ECD8A235C8089007BBA1B /* InsideUserContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD89235C8089007BBA1B /* InsideUserContentView.swift */; };
 		790ECD8D235CBDAB007BBA1B /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD8C235CBDAB007BBA1B /* ConfigurableView.swift */; };
@@ -26,6 +29,8 @@
 		7918F6C5235B711A00CBF97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C4235B711A00CBF97E /* Assets.xcassets */; };
 		7918F6C8235B711A00CBF97E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C6235B711A00CBF97E /* LaunchScreen.storyboard */; };
 		7918F6D3235B711A00CBF97E /* StalkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6D2235B711A00CBF97E /* StalkiTests.swift */; };
+		794640792378B6AB003EF4E1 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794640782378B6AB003EF4E1 /* SeparatorView.swift */; };
+		7946407B2378DE33003EF4E1 /* ContributorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946407A2378DE33003EF4E1 /* ContributorsCell.swift */; };
 		7983F97A235B71ED00E24113 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F979235B71ED00E24113 /* Constructor.swift */; };
 		7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F97E235B734500E24113 /* ListUsersMainView.swift */; };
 		7983F982235B756900E24113 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F981235B756900E24113 /* Service.swift */; };
@@ -57,6 +62,9 @@
 /* Begin PBXFileReference section */
 		4D98EB6B2E01A9D23BA16754 /* Pods-Stalki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stalki.debug.xcconfig"; path = "Target Support Files/Pods-Stalki/Pods-Stalki.debug.xcconfig"; sourceTree = "<group>"; };
 		5DA4BDDA527AB1011802AD47 /* Pods_StalkiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StalkiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7900C268237864C700825791 /* SectionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsHeader.swift; sourceTree = "<group>"; };
+		7900C26B2378669C00825791 /* OwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
+		7900C26D2378677D00825791 /* CustomizeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeComponents.swift; sourceTree = "<group>"; };
 		790ECD87235C7E8D007BBA1B /* InsideUserMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserMainView.swift; sourceTree = "<group>"; };
 		790ECD89235C8089007BBA1B /* InsideUserContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserContentView.swift; sourceTree = "<group>"; };
 		790ECD8C235CBDAB007BBA1B /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
@@ -78,6 +86,8 @@
 		7918F6CE235B711A00CBF97E /* StalkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StalkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7918F6D2235B711A00CBF97E /* StalkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalkiTests.swift; sourceTree = "<group>"; };
 		7918F6D4235B711A00CBF97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		794640782378B6AB003EF4E1 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		7946407A2378DE33003EF4E1 /* ContributorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsCell.swift; sourceTree = "<group>"; };
 		7983F979235B71ED00E24113 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
 		7983F97E235B734500E24113 /* ListUsersMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersMainView.swift; sourceTree = "<group>"; };
 		7983F981235B756900E24113 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -127,6 +137,24 @@
 				5DA4BDDA527AB1011802AD47 /* Pods_StalkiTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7900C26A2378667F00825791 /* DiffentesKindOfCell */ = {
+			isa = PBXGroup;
+			children = (
+				7900C26B2378669C00825791 /* OwnerCell.swift */,
+				7946407A2378DE33003EF4E1 /* ContributorsCell.swift */,
+			);
+			path = DiffentesKindOfCell;
+			sourceTree = "<group>";
+		};
+		7900C26F2378693A00825791 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7900C268237864C700825791 /* SectionsHeader.swift */,
+				794640782378B6AB003EF4E1 /* SeparatorView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		790ECD84235C7E07007BBA1B /* InsideUser */ = {
@@ -223,6 +251,7 @@
 		7983F974235B718F00E24113 /* ReusableLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7900C26F2378693A00825791 /* Components */,
 				790ECD8B235CB508007BBA1B /* Protocol */,
 				79E740F8235B7F4500371FDA /* Extension */,
 			);
@@ -336,6 +365,7 @@
 				79B1129F235F7EA100D8B26B /* InsideRepoMainView.swift */,
 				79B112A1235F80D900D8B26B /* InsideRepoContentView.swift */,
 				79B112A3235F869500D8B26B /* InsideRepoHeaderView.swift */,
+				7900C26A2378667F00825791 /* DiffentesKindOfCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +376,7 @@
 				79E740F9235B7F5400371FDA /* AppColor.swift */,
 				79E740FB235B861400371FDA /* SearchController.swift */,
 				7913D5E02375162700F0FC83 /* UIView.swift */,
+				7900C26D2378677D00825791 /* CustomizeComponents.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -547,7 +578,10 @@
 				79B112A4235F869500D8B26B /* InsideRepoHeaderView.swift in Sources */,
 				79E7410A235BF6EE00371FDA /* ListUserCellViewModel.swift in Sources */,
 				790ECD9B235D4887007BBA1B /* EventCellViewModel.swift in Sources */,
+				7946407B2378DE33003EF4E1 /* ContributorsCell.swift in Sources */,
 				79E74108235BC2E900371FDA /* ListUserCell.swift in Sources */,
+				794640792378B6AB003EF4E1 /* SeparatorView.swift in Sources */,
+				7900C26E2378677D00825791 /* CustomizeComponents.swift in Sources */,
 				7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */,
 				79E740FE235B922200371FDA /* ListUsersContentView.swift in Sources */,
 				79B112A0235F7EA100D8B26B /* InsideRepoMainView.swift in Sources */,
@@ -558,12 +592,14 @@
 				7983F982235B756900E24113 /* Service.swift in Sources */,
 				790ECD8A235C8089007BBA1B /* InsideUserContentView.swift in Sources */,
 				79E740FC235B861400371FDA /* SearchController.swift in Sources */,
+				7900C269237864C700825791 /* SectionsHeader.swift in Sources */,
 				7918F6BE235B711600CBF97E /* SceneDelegate.swift in Sources */,
 				7983F97A235B71ED00E24113 /* Constructor.swift in Sources */,
 				79E740FA235B7F5400371FDA /* AppColor.swift in Sources */,
 				79B112A2235F80D900D8B26B /* InsideRepoContentView.swift in Sources */,
 				798A85502377D55E00062F18 /* RepoCellFactory.swift in Sources */,
 				790ECD91235CC31C007BBA1B /* InsideUserViewModel.swift in Sources */,
+				7900C26C2378669C00825791 /* OwnerCell.swift in Sources */,
 				79E74104235B974600371FDA /* Then.swift in Sources */,
 				790ECD93235D0379007BBA1B /* InsideUserService.swift in Sources */,
 				790ECD8D235CBDAB007BBA1B /* ConfigurableView.swift in Sources */,

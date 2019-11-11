@@ -10,16 +10,19 @@ import UIKit
 
 class InsideRepoContentView: UIView, ConfigurableView {
    
-    lazy var tableView = UITableView().then {
-        $0.rowHeight = 150
+    let factory = RepoTableFactory()
+    
+    lazy var tableView = UITableView(frame: .zero, style: .grouped).then {
         $0.separatorStyle = .none
         $0.backgroundColor = .backgroundColor
         $0.delegate = self
+        $0.dataSource = self
     }
         
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        registerCellsAtTableView()
     }
     
     required init?(coder: NSCoder) {
@@ -27,20 +30,40 @@ class InsideRepoContentView: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
-           addSubviews([tableView])
+        addSubviews([tableView])
     }
        
     func setupConstraints() {
         tableView.cBuild(make: .fillSuperview)
     }
+    
+    fileprivate func registerCellsAtTableView() {
+        RepoTableFactory.registerCells(cells: [OwnerCell.self, ContributorsCell.self], on: tableView)
+    }
 }
 
-extension InsideRepoContentView: UITableViewDelegate {
+extension InsideRepoContentView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return InsideRepoHeaderView()
+        return factory.disposeHeader(withSection: section).headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 250
+        return factory.disposeHeader(withSection: section).heightForHeader
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return factory.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return factory.disposeRows(withIndexPath: IndexPath(row: 0, section: section)).numberOfRows
+    }
+      
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return factory.cellForRow(on: tableView, forIndexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return factory.disposeRows(withIndexPath: indexPath).heightForRow
     }
 }
