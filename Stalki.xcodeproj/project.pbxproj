@@ -30,6 +30,7 @@
 		7918F6C8235B711A00CBF97E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C6235B711A00CBF97E /* LaunchScreen.storyboard */; };
 		7918F6D3235B711A00CBF97E /* StalkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6D2235B711A00CBF97E /* StalkiTests.swift */; };
 		794640792378B6AB003EF4E1 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794640782378B6AB003EF4E1 /* SeparatorView.swift */; };
+		7946407B2378DE33003EF4E1 /* ContributorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946407A2378DE33003EF4E1 /* ContributorsCell.swift */; };
 		7983F97A235B71ED00E24113 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F979235B71ED00E24113 /* Constructor.swift */; };
 		7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F97E235B734500E24113 /* ListUsersMainView.swift */; };
 		7983F982235B756900E24113 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F981235B756900E24113 /* Service.swift */; };
@@ -86,6 +87,7 @@
 		7918F6D2235B711A00CBF97E /* StalkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalkiTests.swift; sourceTree = "<group>"; };
 		7918F6D4235B711A00CBF97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		794640782378B6AB003EF4E1 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		7946407A2378DE33003EF4E1 /* ContributorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsCell.swift; sourceTree = "<group>"; };
 		7983F979235B71ED00E24113 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
 		7983F97E235B734500E24113 /* ListUsersMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersMainView.swift; sourceTree = "<group>"; };
 		7983F981235B756900E24113 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7900C26B2378669C00825791 /* OwnerCell.swift */,
+				7946407A2378DE33003EF4E1 /* ContributorsCell.swift */,
 			);
 			path = DiffentesKindOfCell;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				79B112A4235F869500D8B26B /* InsideRepoHeaderView.swift in Sources */,
 				79E7410A235BF6EE00371FDA /* ListUserCellViewModel.swift in Sources */,
 				790ECD9B235D4887007BBA1B /* EventCellViewModel.swift in Sources */,
+				7946407B2378DE33003EF4E1 /* ContributorsCell.swift in Sources */,
 				79E74108235BC2E900371FDA /* ListUserCell.swift in Sources */,
 				794640792378B6AB003EF4E1 /* SeparatorView.swift in Sources */,
 				7900C26E2378677D00825791 /* CustomizeComponents.swift in Sources */,

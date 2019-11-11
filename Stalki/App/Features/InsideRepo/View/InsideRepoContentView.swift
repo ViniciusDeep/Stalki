@@ -39,7 +39,7 @@ class InsideRepoContentView: UIView, ConfigurableView {
     }
     
     fileprivate func registerCellsAtTableView() {
-        RepoTableFactory.registerCells(cells: [OwnerCell.self], on: self.tableView)
+        RepoTableFactory.registerCells(cells: [OwnerCell.self, ContributorsCell.self], on: self.tableView)
     }
 }
 
@@ -55,6 +55,10 @@ extension InsideRepoContentView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 250
+        } else if section == 1 {
+            return 50
+        } else if section == 2 {
+            return 20
         } else {
             return 50
         }
@@ -73,7 +77,13 @@ extension InsideRepoContentView: UITableViewDelegate, UITableViewDataSource {
     }
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: OwnerCell.self)
+        var cell = UITableViewCell()
+        
+        if indexPath.section == 1 {
+            cell = tableView.dequeueReusableCell(for: indexPath, cellType: OwnerCell.self)
+        } else if indexPath.section == 2 {
+            cell = tableView.dequeueReusableCell(for: indexPath, cellType: ContributorsCell.self)
+        }
         return cell
     }
     

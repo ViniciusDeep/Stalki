@@ -17,6 +17,7 @@ protocol ConfigurableView: UIView {
 
 extension ConfigurableView {
     func setupView() {
+        self.backgroundColor = .backgroundColor
         buildViewHierarchy()
         setupConstraints()
     }
